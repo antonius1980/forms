@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson_7 Form</title>
+    <title>Lesson_7 Form Homework</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -39,74 +37,57 @@
         </div>
     </header>
     <main class="main">
-        <section>
-            <div class="container">
-                <h1 class="title">Ivan Vasylenko</h1>
-                <img src="./img/banner.jpg" alt="Photo Author">
-            </div>
-
-        </section>
-    </main>
-    <footer>
-        <section class="section">
-            <h2>Form</h2>
-            <form action="" method="GET" class="form">
-                <label for="name" class="form__label">Your name</label>
-                <input type="text" id="name" class="form__input" placeholder="Your name" required>
-
-                <label for="password" class="form__label">Your password</label>
-                <input type="password" id="password" class="form__input" placeholder="Your password">
-                <label for="mail" class="form__label">Your mail</label>
-                <input type="mail" id="mail" class="form__input" placeholder="Your mail">
+        <section class="section form-section">
+            <h1 class="section-heading">Homework Form</h1>
+            <form action="" method="GET" class="form" name="survey_form" id="survey_form">
+                <label for="first_name" class="form__label">First name:</label>
+                <input type="text" id="first_name" name="first_name" class="form__input" placeholder="Please enter your first name here" required>
+                <label for="last_name" class="form__label">Last name:</label>
+                <input type="text" id="last_name" name="last_name" class="form__input" placeholder="Please enter your last name here" required>
+                <label for="password" class="form__label">Your password:</label>
+                <input type="password" id="password" name="password" class="form__input" placeholder="Please enter your password here">
+                <input type="password" id="confirm_password" name="confirm_password" class="form__input" placeholder="Please repeat your password here">
+                <label for="email" class="form__label">Your e-mail:</label>
+                <input type="email" id="email" name="email" class="form__input" placeholder="Please enter your e-mail here">
 
                 <div class="form__gender gender">
                     <h2 class="title_2">Your Gender</h2>
                     <div class="gender__item">
                         <label>
-                            Women
-                            <input type="radio" name="gender">
-                            <span class="gender__check"></span>
+                            Women 
+                            <input type="radio" name="gender" id="gender[1]">
+                            <!-- <span class="gender__check"></span> -->
                         </label>
                         <label>
-                            Men
-                            <input type="radio" name="gender">
-                            <span class="gender__check"></span> 
+                            Men 
+                            <input type="radio" name="gender" id="gender[2]"">
+                            <!-- <span class="gender__check"></span>  -->
                         </label>
                     </div>
                 </div>
-                <select name="country" class="form__select">
-                    <option value="" selected disabled>Your country...</option>
-                    <option value="ukr">Ukraine</option>
-                    <option value="swe">Sweden</option>
-                    <option value="pol">Poland</option>
-                    <option value="frn">France</option>
-                </select>
-                <div class="form__skills skills">
-                    <h2 class="title_2">Skills</h2>
-                    <div class="skills__item">
-                        <label>
-                            HTML 5
-                            <input type="checkbox">
-                            <span class="skills__check"></span>
-                        </label>
-                        <label>
-                            CSS 3
-                            <input type="checkbox">
-                            <span class="skills__check"></span>
-                        </label>
-                        <label>
-                            JavaScript
-                            <input type="checkbox">
-                            <span class="skills__check"></span>
-                        </label>
-                    </div>
-                </div>
-                <textarea name="message" id="message" placeholder="Your message"></textarea>
+                <label for="last_name" class="form__label">Last name:</label>
+                <input type="number" id="age" name="age" min="14" max="120" maxlength="3" class="form__input" placeholder="Please enter your age here" >
 
-                <button type="submit">Send</button>
+                <select name="course" id="course" class="form__select">
+                    <option value="" selected disabled>- Please select your course...</option>
+                    <option value="frontend">Front-End</option>
+                    <option value="backend">Back-End</option>
+                    <option value="pm">Project Management</option>
+                    <option value="qa_manual">QA Manual</option>
+                </select>
+                <label for="full_adreess" class="form__label">Full address</label>
+                <textarea name="full_adreess" id="full_address" placeholder="Please enter your full address here"></textarea>
+                <label for="concent" class="form__label">I'm agree with the <a href="#">Website Terms and Conditions</a></label>
+                <input type="checkbox" id="concent" name="concent" value="I'm agree with the Website Terms and Conditions" required>
+                
+
+                <button type="reset">Reset</button><button type="submit">Send</button>
             </form>
         </section>
+    </main>
+    <footer>
+        <p>All rights is not reserved.</p>
     </footer>
+    <script src="./js/script.js"></script>
 </body>
-
 </html>

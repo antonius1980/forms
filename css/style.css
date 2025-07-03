@@ -46,7 +46,7 @@ body {
     align-items: center;
 }
 .form {
-    border: 1px solid #41a59d;
+    border: 1px solid #cad0cf;
 
     min-width: 380px;
     padding: 24px 30px;
@@ -55,12 +55,17 @@ body {
     flex-direction: column;
 
     border-radius: 8px;
-    background: linear-gradient(205deg, #0e272e, #9be2ed);
-    box-shadow: 3px 4px 9px 4px #346064;
+    background: linear-gradient(205deg, #fefefe, #f7f7f7);
+    box-shadow: 3px 4px 15px 3px rgba(42, 42, 42, 0.3);
+}
+
+.form .title_2 {
+    font-size: 1.2rem
 }
 
 .form__label {
     margin-bottom: 8px;
+    font-weight: 500;
 }
 
 .form__input,
@@ -76,6 +81,11 @@ body {
     gap: 5vw;
     justify-content: space-around;
 }
+
+.gender__item input[type="radio"] {
+    /* visibility:hidden; */
+}
+
 .gender__item label {
     display: flex;
     align-items: center;
